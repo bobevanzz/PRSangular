@@ -1,0 +1,48 @@
+<div id="component">
+  <div id="pagetitle">
+    <span>{{ pagetitle }}</span> | <a routerLink="/users/create">Create New</a>
+  </div>
+  <div id="content">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th>Zip</th>
+          <th>Email</th>
+          <th>IsPreApproved</th>
+          <th>Active</th>
+          <th>Privs</th>
+          <th>Actions</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vendor of vendors">
+          <td>{{ vendor.Id }}</td>
+          <td>{{ vendor.Code }}</td>
+          <td>{{ vendor.Name }}</td>
+          <td>{{ vendor.Address }}</td>
+          <td>{{ vendor.City }}</td>
+          <td>{{ vendor.State }}</td>
+          <td>{{ vendor.Zip }}</td>
+          <td>{{ vendor.Email }}</td>
+          <td>{{ vendor.IsPreApproved}}</td>
+          <td>{{vendor.Actions}}</td>
+          <td>
+              {{ vendor.Privs ? "REV" : "" }}
+              {{ vendor.Actions ? "ADM" : "" }}
+          </td>
+          <td>
+            <a routerLink="/vendors/detail/{{vendor.Id}}">Detail</a> |
+            <a routerLink="/vendors/edit/{{vendor.Id}}">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

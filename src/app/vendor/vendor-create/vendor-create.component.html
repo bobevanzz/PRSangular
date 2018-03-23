@@ -1,0 +1,66 @@
+<div id="component">
+  <div id="pagetitle">
+    <span>{{ pagetitle }}</span>
+  </div>
+  <div id="content" *ngIf="user">
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Code">Code:</label>
+      <input [(ngModel)]='vendor.Code' name='Code' type="text" class="form-control col-sm-6" id="Code" aria-describedby="CodeHelp" placeholder="Code">
+      <small id="CodeHelp" class="form-text text-muted col-sm-2">The Code</small>
+    </div>
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Name">Vendor Name:</label>
+      <input [(ngModel)]='vendor.Name' name='Name' type="text" class="form-control col-sm-6" id="Name" aria-describedby="NameHelp" placeholder="Name">
+      <small id="NameHelp" class="form-text text-muted col-sm-2">The name</small>
+    </div>    
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Address">Address:</label>
+      <input [(ngModel)]='vendor.Address' name='Address' type="text" class="form-control col-sm-6" id="Address" aria-describedby="AddressHelp" placeholder="Address">
+      <small id="AddressHelp" class="form-text text-muted col-sm-2">The address</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="City">City:</label>
+      <input [(ngModel)]='vendor.City' name='City' type="text" class="form-control col-sm-6" id="City" aria-describedby="CityHelp" placeholder="City">
+      <small id="CityHelp" class="form-text text-muted col-sm-2">The City</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="State">State:</label>
+      <input [(ngModel)]='vendor.State' name='State' type="text" class="form-control col-sm-6" id="State" aria-describedby="StateHelp" placeholder="State">
+      <small id="StateHelp" class="form-text text-muted col-sm-2">The State</small>
+    </div> 
+     <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Zip">Zip:</label>
+      <input [(ngModel)]='vendor.Zip' name='Zip' type="text" class="form-control col-sm-6" id="Zip" aria-describedby="ZipHelp" placeholder="Zip">
+      <small id="ZipHelp" class="form-text text-muted col-sm-2">The Zip</small>
+    </div> 
+        <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Phone">Phone Number:</label>
+      <input [(ngModel)]='vendor.Phone' name='Phone' type="text" class="form-control col-sm-6" id="Phone" aria-describedby="PhoneHelp" placeholder="Phone">
+      <small id="PhoneHelp" class="form-text text-muted col-sm-2">Phone Number</small>
+    </div> 
+
+     <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Email">Email:</label>
+      <input [(ngModel)]='vendor.Email' name='Email' type="text" class="form-control col-sm-6" id="Email" aria-describedby="EmailHelp" placeholder="Email">
+      <small id="EmailHelp" class="form-text text-muted col-sm-2">The Email</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="IsPreApproved">Is PreApproved:</label>
+      <input [(ngModel)]='vendor.IsPreApproved' name='IsPreApproved' type="checkbox" class="form-control col-sm-6" id="IsPreApproved" aria-describedby="IsPreApprovedHelp" placeholder="IsPreApproved">
+      <small id="IsPreApprovedHelp" class="form-text text-muted col-sm-2">Is PreApproved</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Active">Active:</label>
+      <input [(ngModel)]='vendor.Active' name='Active' type="checkbox" class="form-control col-sm-6" id="Active" aria-describedby="ActiveHelp" placeholder="Active">
+      <small id="ActiveHelp" class="form-text text-muted col-sm-2">Active</small>
+    </div>
+     <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="DateCreated">DateCreated:</label>
+      <input [(ngModel)]='vendor.IsDateCreated' name='DateCreated' type="checkbox" class="form-control col-sm-6" id="DateCreated" aria-describedby="DateCreatedHelp" placeholder="DateCreated">
+      <small id="DateCreatedHelp" class="form-text text-muted col-sm-2">The DateCreated</small>
+    </div> 
+    <div>
+      <button (click)="create()" class="btn btn-success">Add</button>
+    </div>
+  </div>
+</div>
