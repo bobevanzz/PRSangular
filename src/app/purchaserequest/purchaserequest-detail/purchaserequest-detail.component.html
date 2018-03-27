@@ -1,0 +1,23 @@
+<div id="component">
+  <div id="pagetitle">
+    <span>{{ pagetitle }}</span>
+  </div>
+  <div id="content" *ngIf="purchaserequest">
+    <table class="table table-sm">
+      <tr><th>Id</th><td>{{purchaserequest.Id}}</td></tr>
+      <tr><th>UserId</th><td>{{purchaserequest.UserId}}</td></tr>
+      <tr><th>Description</th><td>{{purchaserequest.Description }}</td></tr>
+      <tr><th>Justification</th><td>{{purchaserequest.Justification}}</td></tr>
+      <tr><th>DeliveryMode</th><td>{{purchaserequest.DeliveryMode}}</td></tr>
+      <tr><th>Status</th><td>{{purchaserequest.Status}}</td></tr>
+      <tr><th>Total</th><td>{{purchaserequest.Total}}</td></tr>
+      <tr><th>Active</th><td>{{purchaserequest.Active}}</td></tr>
+      <tr><th>ReasonForRejection</th><td>{{purchaserequest.ReasonForRejection}}</td></tr>
+      <tr><th>DateCreated</th><td>{{purchaserequest.DateCreated}}</td></tr>
+      <tr><th>User</th><td>{{purchaserequest.User.Name}}</td></tr>
+    </table>
+    <a routerLink="/purchaserequests/edit/{{purchaserequest.Id}}" class="btn btn-warning">Edit</a> | 
+    <button (click)="verify()" class="btn btn-danger">Delete</button> |
+    <button [hidden]="isHidden" (click)="remove()" class="btn btn-danger">Verify Delete</button>
+  </div>
+</div>

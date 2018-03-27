@@ -10,7 +10,7 @@ export class Vendor {
   Email: string;
   IsPreApproved: boolean;
   Active: boolean;
-  
+  DateCreated: string;
 
   constructor(
     Id: number,
@@ -20,18 +20,19 @@ export class Vendor {
     City: string,
     State: string,
     Zip: string,
+    Phone: string,
     Email: string,
     IsPreApproved: boolean,
-    Active: boolean,
-
+    Active: boolean
   ) {
     this.Id = Id;
     this.Code = Code;
     this.Name = Name;
     this.Address = Address;
     this.City = City;
-    this.State = State
-    this.Zip = Zip;
+    this.State = State;
+    this.Zip = Zip
+    this.Phone = Phone;
     this.Email = Email;
     this.IsPreApproved = IsPreApproved;
     this.Active = Active;

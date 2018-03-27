@@ -21,6 +21,18 @@ import { VendorListComponent } from './vendor/vendor-list/vendor-list.component'
 import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.component';
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { PurchaserequestListComponent } from './purchaserequest/purchaserequest-list/purchaserequest-list.component';
+import { PurchaserequestCreateComponent } from './purchaserequest/purchaserequest-create/purchaserequest-create.component';
+import { PurchaserequestDetailComponent } from './purchaserequest/purchaserequest-detail/purchaserequest-detail.component';
+import { PurchaserequestEditComponent } from './purchaserequest/purchaserequest-edit/purchaserequest-edit.component';
+import { PurchaserequestlineitemCreateComponent } from './purchaserequestlineitem/purchaserequestlineitem-create/purchaserequestlineitem-create.component';
+import { PurchaserequestlineitemDetailComponent } from './purchaserequestlineitem/purchaserequestlineitem-detail/purchaserequestlineitem-detail.component';
+import { PurchaserequestlineitemEditComponent } from './purchaserequestlineitem/purchaserequestlineitem-edit/purchaserequestlineitem-edit.component';
+import { PurchaserequestlineitemListComponent } from './purchaserequestlineitem/purchaserequestlineitem-list/purchaserequestlineitem-list.component';
 
 
 @NgModule({
@@ -37,7 +49,19 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
     VendorListComponent,
     VendorDetailComponent,
     VendorCreateComponent,
-    VendorEditComponent
+    VendorEditComponent,
+    ProductCreateComponent,
+    ProductDetailComponent,
+    ProductEditComponent,
+    ProductListComponent,
+    PurchaserequestListComponent,
+    PurchaserequestCreateComponent,
+    PurchaserequestDetailComponent,
+    PurchaserequestEditComponent,
+    PurchaserequestlineitemCreateComponent,
+    PurchaserequestlineitemDetailComponent,
+    PurchaserequestlineitemEditComponent,
+    PurchaserequestlineitemListComponent
   ],
   imports: [
     BrowserModule,

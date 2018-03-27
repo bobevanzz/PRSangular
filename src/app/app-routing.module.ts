@@ -11,6 +11,16 @@ import { VendorDetailComponent } from './vendor/vendor-detail/vendor-detail.comp
 import { VendorCreateComponent } from './vendor/vendor-create/vendor-create.component';
 import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component';
 
+import { PurchaseRequestListComponent } from './purchaserequest/purchaserequest-list/purchaserequest-list.component';
+import { PurchaseRequestDetailComponent } from './purchaserequest/purchaserequest-detail/purchaserequest-detail.component';
+import { PurchaseRequestCreateComponent } from './purchaserequest/purchaserequest-create/purchaserequest-create.component';
+import { PurchaseRequestEditComponent } from './purchaserequest/purchaserequest-edit/purchaserequest-edit.component';
+
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ProductCreateComponent } from './product/product-create/product-create.component';
+import { ProductEditComponent } from './product/product-edit/product-edit.component';
+
 
 import { HomeComponent } from "./support/home/home.component";
 import { AboutComponent } from "./support/about/about.component";
@@ -21,6 +31,17 @@ const routes: Routes = [
   { path: "users/edit/:id", component: UserEditComponent },
   { path: "users/list", component: UserListComponent },
   { path: "users/create", component: UserCreateComponent },
+
+  { path: "products/detail/:id", component: ProductDetailComponent },
+  { path: "products/edit/:id", component: ProductEditComponent },
+  { path: "products/list", component: ProductListComponent },
+  { path: "products/create", component: ProductCreateComponent },
+
+
+  { path: "purchaserequests/detail/:id", component: PurchaseRequestDetailComponent },
+  { path: "purchaserequests/edit/:id", component: PurchaseRequestEditComponent },
+  { path: "purchaserequests/list", component: PurchaseRequestListComponent },
+  { path: "purchaserequests/create", component: PurchaseRequestCreateComponent },
   
   { path: "vendors/detail/:id", component: VendorDetailComponent },
   { path: "vendors/edit/:id", component: VendorEditComponent },
