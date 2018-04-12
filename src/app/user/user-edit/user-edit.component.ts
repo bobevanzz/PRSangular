@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from '@services/system.service';
 
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
@@ -16,6 +17,7 @@ export class UserEditComponent implements OnInit {
 
   constructor(
     private UserSvc: UserService,
+    private sys: SystemService,
     private route: ActivatedRoute,
     private router: Router
   ) { }

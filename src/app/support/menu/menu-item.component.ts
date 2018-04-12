@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { SystemService } from '@services/system.service';
 
-import { Menu } from "../../menu/menu";
+import { Menu } from "./menu";
 
 @Component({
   selector: 'app-menu-item',
@@ -11,7 +12,9 @@ export class MenuItemComponent implements OnInit {
 
   @Input() menuItem: Menu;
 
-  constructor() { }
+  constructor(
+    private sys: SystemService
+  ) { }
 
   ngOnInit() {
   }

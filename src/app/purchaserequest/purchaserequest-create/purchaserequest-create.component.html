@@ -2,49 +2,47 @@
   <div id="pagetitle">
     <span>{{ pagetitle }}</span>
   </div>
-  <div id="content" *ngIf="purchaserequest">
+  <div id="content" *ngIf="purchaseRequest">
     <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestDescription">Description:</label>
-      <input [(ngModel)]='purchaserequest.Description' name='Description' type="text" class="form-control col-sm-6" id="purchaserequestDescription" aria-describedby="DescriptionHelp" placeholder="Description">
+      <label class='col-form-label col-sm-2' for="purchaseRequestPartNumber">Description:</label>
+      <input [(ngModel)]='purchaseRequest.Description' name='Description' type="text" class="form-control col-sm-6" id="purchaseRequestDescription" aria-describedby="DescriptioneHelp" placeholder="Description">
       <small id="DescriptionHelp" class="form-text text-muted col-sm-2">The Description</small>
     </div>    
     <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestJustification">Justification:</label>
-      <input [(ngModel)]='purchaserequest.Justification' Justification='Justification' type="text" class="form-control col-sm-6" id="purchaserequestJustification" aria-describedby="JustificationHelp" placeholder="Justification">
-      <small id="JustificationHelp" class="form-text text-muted col-sm-2">Justification</small>
+      <label class='col-form-label col-sm-2' for="purchaseRequestJustification">Justification:</label>
+      <input [(ngModel)]='purchaseRequest.Justification' name='Justification' type="text" class="form-control col-sm-6" id="purchaseRequestJustification" aria-describedby="JustificationHelp" placeholder="Justification">
+      <small id="JustificationHelp" class="form-text text-muted col-sm-2">The Justification</small>
     </div> 
     <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestDeliveryMode">DeliveryMode:</label>
-      <input [(ngModel)]='purchaserequest.DeliveryMode' name='DeliveryMode' type="number" class="form-control col-sm-6" id="purchaserequestDeliveryMode" aria-describedby="DeliveryModeHelp" placeholder="DeliveryMode">
+      <label class='col-form-label col-sm-2' for="purchaseRequestRejectionReason">RejectionReason:</label>
+      <input [(ngModel)]='purchaseRequest.RejectionReason' name='RejectionReason' type="text" class="form-control col-sm-6" id="purchaseRequestRejectionReason" aria-describedby="RejectionReasonHelp" placeholder="RejectionReason">
+      <small id="RejectionReasonHelp" class="form-text text-muted col-sm-2">The RejectionReason</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="DeliveryMode">DeliveryMode:</label>
+      <input [(ngModel)]='purchaseRequest.DeliveryMode' name='DeliveryMode' type="text" class="form-control col-sm-6" id="DeliveryMode" aria-describedby="DeliveryModeHelp" placeholder="DeliveryMode">
       <small id="DeliveryModeHelp" class="form-text text-muted col-sm-2">The DeliveryMode</small>
     </div> 
     <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestStatus">Status:</label>
-      <input [(ngModel)]='purchaserequest.Status' name='Status' type="text" class="form-control col-sm-6" id="Status" aria-describedby="StatusHelp" placeholder="Status">
+      <label class='col-form-label col-sm-2' for="Status">Status:</label>
+      <input [(ngModel)]='purchaseRequest.Status' name='DeliveryMode' type="text" class="form-control col-sm-6" id="Status" aria-describedby="StatusHelp" placeholder="Status">
       <small id="StatusHelp" class="form-text text-muted col-sm-2">The Status</small>
     </div> 
-<div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestTotal">Total:</label>
-      <input [(ngModel)]='purchaserequest.Total' name='Total' type="text" class="form-control col-sm-6" id="Total" aria-describedby="TotalHelp" placeholder="Total">
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Total">Total:</label>
+      <input [(ngModel)]='purchaseRequest.Total' name='Total' type="text" class="form-control col-sm-6" id="Total" aria-describedby="TotalHelp" placeholder="Total">
       <small id="TotalHelp" class="form-text text-muted col-sm-2">The Total</small>
-    </div> <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestActive">Active:</label>
-      <input [(ngModel)]='purchaserequest.Active' name='Active' type="text" class="form-control col-sm-6" id="Active" aria-describedby="ActiveHelp" placeholder="Active">
-      <small id="ActiveHelp" class="form-text text-muted col-sm-2">The Active</small>
-    </div> <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestReasonForRejection">ReasonForRejection:</label>
-      <input [(ngModel)]='purchaserequest.ReasonForRejection' name='ReasonForRejection' type="text" class="form-control col-sm-6" id="ReasonForRejection" aria-describedby="ReasonForRejectionHelp" placeholder="ReasonForRejection">
-      <small id="ReasonForRejectionHelp" class="form-text text-muted col-sm-2">The ReasonForRejection</small>
-    </div> <div class="form-group row">
-      <label class='col-form-label col-sm-2' for="purchaserequestDateCreated">DateCreated:</label>
-      <input [(ngModel)]='purchaserequest.DateCreated' name='DateCreated' type="text" class="form-control col-sm-6" id="DateCreated" aria-describedby="DateCreatedHelp" placeholder="DateCreated">
-      <small id="DateCreatedHelp" class="form-text text-muted col-sm-2">The DateCreated</small>
+    </div> 
+    <div class="form-group row">
+      <label class='col-form-label col-sm-2' for="Active">Active:</label>
+      <input [(ngModel)]='purchaseRequest.Active' name='ActiveMode' type="checkbox" class="form-control col-sm-6" id="Active" aria-describedby="ActiveHelp" placeholder="ActiveMode">
+      <small id="ActiveHelp" class="form-text text-muted col-sm-2">The ActiveMode</small>
     </div> 
     <div class='form-group row' >
-        <label class='col-form-label col-sm-2' for="purchaserequestUserId">User:</label>
+        <label class='col-form-label col-sm-2' for="purchaseRequestuser">User:</label>
       <div class='col-sm-6 select-list'>
-        <select [(ngModel)]='purchaserequest.UserId' [compareWith]='compareFn' class='form-control' name='User' id='purchaserequest-User'>
-          <option *ngFor="let User of Users" [ngValue]="User.Id" [selected]="User.Id == purchaserequest.UserId">{{User.Name}}</option>
+        <select [(ngModel)]='purchaseRequest.UserId' [compareWith]='compareFn' class='form-control' name='User' id='purchaseRequest-User'>
+          <option *ngFor="let user of users" [ngValue]="user.Id" [selected]="user.Id == purchaseRequest.UserId">{{user.Lastname}}</option>
         </select>
       </div>
     </div>

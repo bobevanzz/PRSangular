@@ -2,24 +2,24 @@
   <div id="pagetitle">
     <span>{{ pagetitle }}</span> | <a routerLink="/users/create">Create New</a>
   </div>
-  <div id="content">
+  <div id="content" *ngIf="users">
     <table class="table table-sm">
       <thead>
         <tr>
-          <th>Id</th>
-          <th>Name</th>
-          <th>User Name</th>
-          <th>Phone</th>
-          <th>Email</th>
-          <th>Privs</th>
-          <th>Actions</th>
+          <th><a class="btn btn-link font-weight-bold" (click)="setSortBy('Id')">Id</a></th>
+          <th><a class="btn btn-link font-weight-bold" (click)="setSortBy('Lastname')">Name</a></th>
+          <th><a class="btn btn-link font-weight-bold" (click)="setSortBy('Username')">User Name</a></th>
+          <th><a class="btn btn-link font-weight-bold" (click)="setSortBy('Phone')">Phone</a></th>
+          <th><a class="btn btn-link font-weight-bold" (click)="setSortBy('Email')">Email</a></th>
+          <th><a class="btn btn-link font-weight-bold">Privs</a></th>
+          <th><a class="btn btn-link font-weight-bold">Actions</a></th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users">
+        <tr *ngFor="let user of users | sort:sortBy">
           <td>{{ user.Id }}</td>
-          <td>{{ user.FirstName }} {{ user.LastName }}</td>
-          <td>{{ user.UserName }}</td>
+          <td>{{ user.Firstname }} {{ user.Lastname }}</td>
+          <td>{{ user.Username }}</td>
           <td>{{ user.Phone }}</td>
           <td>{{ user.Email }}</td>
           <td>

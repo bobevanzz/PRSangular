@@ -1,3 +1,40 @@
-<p>
-  purchaserequest-list works!
-</p>
+<div id="component">
+  <div id="pagetitle">
+    <span>{{ pagetitle }}</span> | <a routerLink="/purchaserequests/create">Create New</a>
+  </div>
+  <div id="content">
+    <table class="table table-sm">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Justification</th>
+          <th>DeliveryMode</th>
+          <th>Status</th>
+          <th>Total</th>
+          <th>Active</th>
+          <th>ReasonForRejection</th>
+          <th>DateCreated</th>
+          <th>User</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let purchaserequest of purchaserequests">
+          <td>{{ purchaserequest.Description }}</td>
+          <td>{{ purchaserequest.Justification }}</td>
+          <td>{{ purchaserequest.DeliveryMode }}</td>
+          <td>{{ purchaserequest.Status | currency }}</td>
+          <td>{{ purchaserequest.Total }}</td>
+          <td>{{ purchaserequest.Active }}</td>
+          <td>{{ purchaserequest.ReasonForRejection }}</td>
+          <td>{{ purchaserequest.DateCreated }}</td>          
+          <td>{{ purchaserequest.User.Name }}</td>
+          <td>
+            <a routerLink="/purchaserequests/detail/{{purchaserequest.Id}}">Detail</a> |
+            <a routerLink="/purchaserequests/edit/{{purchaserequest.Id}}">Edit</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

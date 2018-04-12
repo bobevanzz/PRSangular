@@ -7,7 +7,7 @@ export class PurchaseRequest {
   RejectionReason: string;
   DeliveryMode: string;
   Status: string;
-  Total: string;
+  Total: number;
   Active: boolean;
   DateCreated: string;
 
@@ -19,7 +19,6 @@ export class PurchaseRequest {
     RejectionReason: string,
     DeliveryMode: string,
     Status: string,
-    Total: string,
     Active: boolean
   ) {
     this.Id = Id;
@@ -29,7 +28,7 @@ export class PurchaseRequest {
     this.RejectionReason = RejectionReason;
     this.DeliveryMode = DeliveryMode;
     this.Status = Status;
-    this.Total = Total;
+    this.Total = 0;
     this.Active = Active;
   }
 }

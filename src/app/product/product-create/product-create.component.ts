@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { ProductService } from '../../services/product.service';
-import { Product } from '../../models/product';
-import { VendorService } from '../../services/vendor.service';
-import { Vendor } from '../../models/vendor';
+import { ProductService } from '@services/product.service';
+import { Product } from '@models/product';
+import { VendorService } from '@services/vendor.service';
+import { Vendor } from '@models/vendor';
+import { SystemService } from '@services/system.service';
 
 @Component({
   selector: 'app-product-create',
@@ -20,6 +21,7 @@ export class ProductCreateComponent implements OnInit {
   constructor(
     private ProductSvc: ProductService,
     private VendorSvc: VendorService,
+    private sys: SystemService,
     private router: Router
   ) { }
 

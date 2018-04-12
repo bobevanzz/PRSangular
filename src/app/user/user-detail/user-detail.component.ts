@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { SystemService } from '@services/system.service';
 
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
@@ -13,22 +14,25 @@ export class UserDetailComponent implements OnInit {
 
   pagetitle: string = "User Detail";
   user: User;
+  isHidden: boolean = true;
 
   constructor(
     private UserSvc: UserService,
-    private router: Router,
+    private sys: SystemService,
+    private router: Router, 
     private route: ActivatedRoute
   ) { }
-remove(): void{
 
-  this.UserSvc.Remove(this.user)
-    .subscribe(res => {
-      console.log(res);
-    
-    this.router.navigateByUrl("/users/list");
-    });
-}
-
+  verify(): void {
+    this.isHidden = false;
+  }
+  remove(): void {
+    this.UserSvc.Remove(this.user)
+      .subscribe(res => {
+        console.log(res);
+        this.router.navigateByUrl("/users/list");
+      });
+  }
 
   getUserById(id) {
     this.UserSvc.Get(id)

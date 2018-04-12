@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SystemService } from '@services/system.service';
 
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
@@ -12,10 +13,11 @@ import { User } from '../../models/user';
 export class UserCreateComponent implements OnInit {
 
   pagetitle: string = "User Create";
-  user: User = new User(-10, '', '', '', '', '', '', false, true, true);
+  user: User = new User(0, '', '', '', '', '', '', false, false, true);
 
   constructor(
     private UserSvc: UserService,
+    private sys: SystemService,
     private router: Router
   ) { }
 
@@ -28,7 +30,6 @@ export class UserCreateComponent implements OnInit {
   }
 
   ngOnInit() { 
-    // for product you'll want to store vendors for the foreign key here
   }
 
 }

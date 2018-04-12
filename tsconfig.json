@@ -1,6 +1,21 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+
+    "baseUrl": "src",
+    "paths": {
+      "@models/*": ["app/models/*"],
+      "@services/*": ["app/services/*"],
+      "@pipes/*": ["app/pipes/*"],
+      "@guards/*": ["app/guards/*"],
+      "@support/*": ["app/support/*"],
+      "@user/*": ["app/user/*"],
+      "@vendor/*": ["app/vendor/*"],
+      "@product/*": ["app/product/*"],
+      "@purchaseRequest/*": ["app/purchaserequest/*"],
+      "@purchaseRequestLineitem/*": ["app/purchaserequestlineitem/*"]
+    },
+  
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -11,6 +26,7 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+
     "lib": [
       "es2017",
       "dom"

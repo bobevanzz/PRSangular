@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { SystemService } from '@services/system.service';
 
 @Component({
-  selector: 'app-purchaserequestlineitem-list',
-  templateUrl: './purchaserequestlineitem-list.component.html',
-  styleUrls: ['./purchaserequestlineitem-list.component.css']
+  selector: 'app-purchase-request-lineitem-list',
+  templateUrl: './purchase-request-lineitem-list.component.html',
+  styleUrls: ['./purchase-request-lineitem-list.component.css']
 })
-export class PurchaserequestlineitemListComponent implements OnInit {
+export class PurchaseRequestLineItemListComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private sys: SystemService
+  ) { }
 
   ngOnInit() {
   }

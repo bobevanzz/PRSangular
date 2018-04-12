@@ -1,5 +1,8 @@
-a {
+.menuitem-active {
   color: white;
+}
+a {
+  color: silver;
   text-decoration: none;
   padding: 0 10px;
   font-family: Tahoma;

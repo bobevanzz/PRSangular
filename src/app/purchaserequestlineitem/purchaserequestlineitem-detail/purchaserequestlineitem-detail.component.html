@@ -1,3 +1,15 @@
-<p>
-  purchaserequestlineitem-detail works!
-</p>
+<div id="component">
+  <div id="pagetitle">
+    <span>{{ pagetitle }}</span>
+  </div>
+  <div id="content" *ngIf="purchaseRequestLineitem">
+    <table class="table table-sm">
+      <tr><th>Id</th><td>{{purchaseRequestLineitem.Id}}</td></tr>
+      <tr><th>Product</th><td>{{purchaseRequestLineitem.Product.Name }}</td></tr>
+      <tr><th>Quantity</th><td>{{purchaseRequestLineitem.Quantity}}</td></tr>
+    </table>
+    <a routerLink="/purchaseRequestLineitems/edit/{{purchaseRequestLineitem.PurchaseRequestId}}/{{purchaseRequestLineitem.Id}}" class="btn btn-warning">Edit</a> | 
+    <button (click)="verify()" class="btn btn-danger">Delete</button> |
+    <button [hidden]="isHidden" (click)="remove()" class="btn btn-danger">Verify Delete</button>
+  </div>
+</div>

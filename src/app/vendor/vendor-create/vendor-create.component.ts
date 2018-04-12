@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { VendorService } from '../../services/vendor.service';
-import { Vendor } from '../../models/vendor';
+import { SystemService } from '@services/system.service';
+import { VendorService } from '@services/vendor.service';
+import { Vendor } from '@models/vendor';
 
 @Component({
   selector: 'app-vendor-create',
@@ -12,10 +13,11 @@ import { Vendor } from '../../models/vendor';
 export class VendorCreateComponent implements OnInit {
 
   pagetitle: string = "Vendor Create";
-  vendor: Vendor = new Vendor(-10, '', '', '', '', '', '', '', false, true);
+  vendor: Vendor = new Vendor(0, '', '', '', 'Cincinnati', 'OH', '45201', '513-555-1212', 'info@help.com', false, true);
 
   constructor(
     private VendorSvc: VendorService,
+    private sys: SystemService,
     private router: Router
   ) { }
 

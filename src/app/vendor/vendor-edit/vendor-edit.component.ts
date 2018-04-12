@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { SystemService } from '@services/system.service';
 import { VendorService } from '../../services/vendor.service';
 import { Vendor } from '../../models/vendor';
 
@@ -16,6 +17,7 @@ export class VendorEditComponent implements OnInit {
 
   constructor(
     private VendorSvc: VendorService,
+    private sys: SystemService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
@@ -32,7 +34,7 @@ export class VendorEditComponent implements OnInit {
     this.VendorSvc.Get(id)
       .subscribe(vendor => {
         this.vendor = vendor;
-        console.log("vendor:", vendor);
+        console.log("Vendor:", vendor);
       });
   }  
 
@@ -42,6 +44,6 @@ export class VendorEditComponent implements OnInit {
         let id = parms["id"];
         this.getVendorById(id);
       });  
-    }
+  }
 
 }
