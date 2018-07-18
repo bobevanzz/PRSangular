@@ -19,7 +19,30 @@ export class PurchaseRequestLineItemEditComponent implements OnInit {
   purchaseRequestLineitem: PurchaseRequestLineitem;
   products: Product[];
 //
-  
+  constructor(
+    private sys: SystemService,
+    private PurchaseRequestLineitemSvc: PurchaseRequestLineitemService,
+    private ProductSvc: ProductService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
+
+  // This is used by the <SELECT [compareWith]='compareFn'> to select the FK in a dropdown list
+  // This one uses Product instances. For FKs with just the ID, it would be:
+  // compareFn(v1: number, v2: number) { return v1 == v2; }
+  compareFn(v1: number, v2: number): boolean {
+    return v1 === v2;
+  }
+
+  change(): void {
+    console.log(this.purchaseRequestLineitem);
+    this.PurchaseRequestLineitemSvc.Change(this.purchaseRequestLineitem)
+      .subscribe(res => {
+        console.log(res);
+        this.router.navigateByUrl("/purchaseRequests/lines/"+this.purchaseRequestId);
+      });
+  }
+
   getPurchaseRequestLineitemById(id) {
     this.PurchaseRequestLineitemSvc.Get(id)
       .subscribe(purchaseRequestLineitem => {
